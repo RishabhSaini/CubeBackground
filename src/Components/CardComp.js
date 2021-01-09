@@ -1,26 +1,40 @@
 import React, { useState } from "react";
 import "./CardComp.css";
 import "w3-css/w3.css";
-import ModalPopup from "./ModalPopup";
+import ModalPopupProjects from "./ModalPopupProjects";
+import ModalPopupWork from "./ModalPopupWork";
 import styled from "styled-components";
 
 const CardComp = () => {
-  const [showModal, setShowModal] = useState(false);
-  const openModal = () => {
-    setShowModal((prev) => !prev);
+  const [showModalProjects, setShowModalProjects] = useState(false);
+  const [showModalWork, setShowModalWork] = useState(false);
+  const openModalProjects = () => {
+    setShowModalProjects((prev) => !prev);
+  };
+  const openModalWork = () => {
+    setShowModalWork((prev) => !prev);
   };
   return (
     <React.Fragment>
-      <div className="header">
-        <div className="w3-container">
-          <StyledButton onClick={openModal}>About me</StyledButton>
-          <StyledButton>Work Experience</StyledButton>
+      <div className="header w3-row">
+        <div className="w3-container w3-quarter">
+          <StyledButton onClick={openModalProjects}>Projects</StyledButton>
+        </div>
+        <div className="w3-container w3-half">
+          Rishabh Saini
+        </div>
+        <div className="w3-container w3-quarter">
+          <StyledButton onClick={openModalWork}>Work Experience</StyledButton>
         </div>
       </div>
-      <ModalPopup
-        showModal={showModal}
-        setShowModal={setShowModal}
-      ></ModalPopup>
+      <ModalPopupProjects
+        showModalProjects={showModalProjects}
+        setShowModalProjects={setShowModalProjects}
+      ></ModalPopupProjects>
+      <ModalPopupWork
+        showModalWork={showModalWork}
+        setShowModalWork={setShowModalWork}
+      ></ModalPopupWork>
       <div className="cardComp">
         <div className="w3-container">
           <div className="box w3-panel w3-card">

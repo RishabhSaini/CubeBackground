@@ -85,6 +85,18 @@ const Fibre = () => {
     );
   }
 
+  function CameraMovement() {
+    useFrame(({ clock, camera }) => {
+      var rotSpeed = 0.0003;
+      var x = camera.position.x;
+      var y = camera.position.y;
+      var z = camera.position.z;
+      camera.position.y = y * Math.cos(rotSpeed) + z * Math.sin(rotSpeed);
+      camera.position.z = z * Math.cos(rotSpeed) - y * Math.sin(rotSpeed);
+    });
+    return null;
+  }
+
   return (
     <Canvas
       onCreated={({ gl }) => {
@@ -111,6 +123,7 @@ const Fibre = () => {
           saturation={0.2} // saturation in radians
         />
       </EffectComposer>
+      <CameraMovement />
       <OrbitControls />
     </Canvas>
   );

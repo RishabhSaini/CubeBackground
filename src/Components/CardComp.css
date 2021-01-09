@@ -19,11 +19,10 @@
 .header{
     position: absolute;
     z-index: 3;
-    display: flex;
+    display:flex;
     align-items: center;
-    height: 108px;
+    height: 10%;
     width: 100%;
-    padding-left: 44%;
     justify-content: space-between;
     color:aliceblue ;
 }

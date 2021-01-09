@@ -1,0 +1,35 @@
+.cardComp{
+    position: absolute;
+    z-index: 2;
+    color: seashell;
+    margin-left: 33%;
+    margin-top: 15% ;
+    
+    
+}
+
+.box{
+    height: fit-content;
+    width:fit-content;
+    background-color: grey;
+    opacity: 50%;
+    color: white;
+}
+
+.header{
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    height: 108px;
+    width: 100%;
+    padding-left: 40%;
+    justify-content: space-between;
+    color:aliceblue ;
+}
+
+.cust-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }

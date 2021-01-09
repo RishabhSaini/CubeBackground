@@ -1,34 +1,45 @@
-.cardComp{
-    position: absolute;
-    z-index: 2;
-    color: seashell;
-    margin-left: 25%;
-    margin-top: 12% ;
+.cardComp {
+  position: absolute;
+  z-index: 2;
+  color: seashell;
+  margin-left: 25%;
+  margin-top: 9%;
 }
 
-.box{
-    height: fit-content;
-    width:fit-content;
-    background-color: grey;
-    opacity: 75%;
-    color: white;
-    font-size: 16px;
-    font-size: 1.2vw;
+.box {
+  height: fit-content;
+  width: fit-content;
+  background-color: #637373;
+  opacity: 85%;
+  color: white;
 }
 
-.header{
-    position: absolute;
-    z-index: 3;
-    display:flex;
-    align-items: center;
-    height: 10%;
-    width: 100%;
-    justify-content: space-between;
-    color:aliceblue ;
+.box:hover{
+    opacity: 0%;
+}
+
+.header {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+  justify-content: space-between;
+  color: aliceblue;
 }
 
 .cust-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+  list-style-type: none;
+  margin: 15px;
+  padding: 2px;
+  font-size: 22px;
+  color: #ffeadb;
+}
+
+.cust-div{
+    color: #ff9a76;
+    font-size: 30px;
+    font-weight: 500;
+    font-family:sans-serif;
+}

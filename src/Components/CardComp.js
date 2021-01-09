@@ -21,7 +21,7 @@ const CardComp = () => {
           <StyledButton onClick={openModalProjects}>Projects</StyledButton>
         </div>
         <div className="w3-container w3-half">
-          Rishabh Saini
+          <StyledName>Rishabh Saini</StyledName>
         </div>
         <div className="w3-container w3-quarter">
           <StyledButton onClick={openModalWork}>Work Experience</StyledButton>
@@ -36,12 +36,16 @@ const CardComp = () => {
         setShowModalWork={setShowModalWork}
       ></ModalPopupWork>
       <div className="cardComp">
-        <div className="w3-container">
-          <div className="box w3-panel w3-card">
-            <h3>What inspires me?</h3>
-            "Only those who attempt the absurd can achieve the impossible"
-            Albert Einstein
-            <h3>What is my aim?</h3>
+        <div className="w3-container w3-margin">
+          <div className="box w3-panel w3-card ">
+            <div className="cust-div">What inspires me?</div>
+            <ul className="cust-ul">
+              <li>
+                "Only those who attempt the absurd can achieve the impossible"
+                Albert Einstein
+              </li>
+            </ul>
+            <div className="cust-div">What is my aim?</div>
             <ul className="cust-ul">
               <li>
                 Leverage the power of technology to create paradigm shifts in
@@ -51,7 +55,7 @@ const CardComp = () => {
                 Creating solutions that make a meaningful impact on society
               </li>
             </ul>
-            <h3>Who am I?</h3>
+            <div className="cust-div">Who am I?</div>
             <ul className="cust-ul">
               <li>"I think, therefore I am" René Descartes</li>
               <li>Education: Youtube, Google, Coursera</li>
@@ -60,8 +64,10 @@ const CardComp = () => {
                 Toronto
               </li>
             </ul>
-            <h3>Why a website?</h3>
-            To showcase my portfolio and ongoing projects
+            <div className="cust-div">Why a website?</div>
+            <ul className="cust-ul">
+              <li>To showcase my portfolio and ongoing projects</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -77,8 +83,26 @@ const StyledButton = styled.button`
   margin: 10px;
   border-radius: 4px;
   border: none;
-  background: #141414;
-  color: #fff;
+  background: #709fb0;
+  color: #f4ebc1;
   font-size: 24px;
   cursor: pointer;
+  opacity: 80%;
+  :hover {
+    opacity: 100%;
+    background-color: #709fb0;
+    color: #f4ebc1;
+  }
+`;
+
+const StyledName = styled.div`
+  font-size: 5rem;
+  text-align: center;
+  height: 10vh;
+  line-height: 10vh;
+  color: #fcedd8;
+  font-family: "Niconne", cursive;
+  font-weight: 700;
+  text-shadow: 5px 5px 0px #eb452b, 10px 10px 0px #efa032, 15px 15px 0px #46b59b,
+    20px 20px 0px #017e7f;
 `;

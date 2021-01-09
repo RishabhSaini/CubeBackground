@@ -2,18 +2,18 @@
     position: absolute;
     z-index: 2;
     color: seashell;
-    margin-left: 33%;
-    margin-top: 15% ;
-    
-    
+    margin-left: 25%;
+    margin-top: 12% ;
 }
 
 .box{
     height: fit-content;
     width:fit-content;
     background-color: grey;
-    opacity: 50%;
+    opacity: 75%;
     color: white;
+    font-size: 16px;
+    font-size: 1.2vw;
 }
 
 .header{
@@ -23,7 +23,7 @@
     align-items: center;
     height: 108px;
     width: 100%;
-    padding-left: 40%;
+    padding-left: 44%;
     justify-content: space-between;
     color:aliceblue ;
 }

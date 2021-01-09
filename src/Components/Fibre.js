@@ -5,6 +5,18 @@ import * as THREE from "three";
 import "./Fibre.css";
 import "./ColorMaterial";
 import clamp from "clamp";
+import {
+  ChromaticAberration,
+  EffectComposer,
+  Bloom,
+  Noise,
+  Vignette,
+  DotScreen,
+  HueSaturation,
+} from "react-postprocessing";
+
+import { BlendFunction } from "postprocessing";
+
 var colors = require("nice-color-palettes");
 
 console.log(colors.length);
@@ -61,7 +73,7 @@ const Fibre = () => {
     });
     return (
       <instancedMesh ref={mesh} args={[null, null, 1000]}>
-        <boxBufferGeometry args={[0.4, 4.3, 0.4]} />
+        <boxBufferGeometry args={[0.3, 3.3, 0.3]} />
         {/* <meshStandardMaterial color={"hotpink"} /> */}
         <colorMaterial
           color={pallete[1]}
@@ -78,11 +90,27 @@ const Fibre = () => {
       onCreated={({ gl }) => {
         gl.setClearColor(pallete[4]);
       }}
-      camera={{ position: [0, 6, 0] }}
+      camera={{ position: [0, 10, 0] }}
     >
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Box position={[0, 0, 0]} count={20} />
+      <EffectComposer>
+        <ChromaticAberration offset={[-0.001, 0.005]} />
+        <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
+        <Noise opacity={0.02} />
+        <Vignette eskil={false} offset={0.1} darkness={1.1} />
+        {/* <DotScreen
+          blendFunction={BlendFunction.NORMAL} // blend mode
+          angle={Math.PI * 0.5} // angle of the dot pattern
+          scale={0.9} // scale of the dot pattern
+        /> */}
+        <HueSaturation
+          blendFunction={BlendFunction.NORMAL} // blend mode
+          hue={0} // hue in radians
+          saturation={0.2} // saturation in radians
+        />
+      </EffectComposer>
       <OrbitControls />
     </Canvas>
   );

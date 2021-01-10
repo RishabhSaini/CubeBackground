@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/%7BCubeBackground%7D/static/css/main.d9f48fa8.chunk.css",
+    "main.js": "/%7BCubeBackground%7D/static/js/main.111b4cc5.chunk.js",
+    "main.js.map": "/%7BCubeBackground%7D/static/js/main.111b4cc5.chunk.js.map",
+    "runtime-main.js": "/%7BCubeBackground%7D/static/js/runtime-main.33f26c42.js",
+    "runtime-main.js.map": "/%7BCubeBackground%7D/static/js/runtime-main.33f26c42.js.map",
+    "static/css/2.51b7c1e4.chunk.css": "/%7BCubeBackground%7D/static/css/2.51b7c1e4.chunk.css",
+    "static/js/2.d33dbb19.chunk.js": "/%7BCubeBackground%7D/static/js/2.d33dbb19.chunk.js",
+    "static/js/2.d33dbb19.chunk.js.map": "/%7BCubeBackground%7D/static/js/2.d33dbb19.chunk.js.map",
+    "static/js/3.05ea05c2.chunk.js": "/%7BCubeBackground%7D/static/js/3.05ea05c2.chunk.js",
+    "static/js/3.05ea05c2.chunk.js.map": "/%7BCubeBackground%7D/static/js/3.05ea05c2.chunk.js.map",
+    "index.html": "/%7BCubeBackground%7D/index.html",
+    "static/css/2.51b7c1e4.chunk.css.map": "/%7BCubeBackground%7D/static/css/2.51b7c1e4.chunk.css.map",
+    "static/css/main.d9f48fa8.chunk.css.map": "/%7BCubeBackground%7D/static/css/main.d9f48fa8.chunk.css.map",
+    "static/js/2.d33dbb19.chunk.js.LICENSE.txt": "/%7BCubeBackground%7D/static/js/2.d33dbb19.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33f26c42.js",
+    "static/css/2.51b7c1e4.chunk.css",
+    "static/js/2.d33dbb19.chunk.js",
+    "static/css/main.d9f48fa8.chunk.css",
+    "static/js/main.111b4cc5.chunk.js"
+  ]
+}

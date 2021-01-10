@@ -14,10 +14,6 @@
   color: white;
 }
 
-.box:hover{
-    opacity: 0%;
-}
-
 .header {
   position: absolute;
   z-index: 3;

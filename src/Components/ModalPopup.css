@@ -3,6 +3,7 @@
   grid-template-columns: auto auto auto;
   background-color: inherit;
   border-radius: 10px;
+  padding: 5px;
 }
 .grid-item {
   padding: 5px;

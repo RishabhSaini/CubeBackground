@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { MdClose } from "react-icons/md";
-import Typical from "react-typical";
 import "./ModalPopup.css";
 
 const ModalPopupProjects = ({ showModalProjects, setShowModalProjects }) => {
@@ -10,35 +9,15 @@ const ModalPopupProjects = ({ showModalProjects, setShowModalProjects }) => {
       {showModalProjects ? (
         <Background>
           <ModalWrapper>
+            <CloseModalButton
+              aria-label="Close modal"
+              onClick={() => setShowModalProjects((prev) => !prev)}
+            />
             <ModalContent>
-              <Typical
-                steps={[
-                  "Welcome",
-                  1000,
-                  "I am Rishabh",
-                  3000,
-                  "I am a Designer",
-                  2000,
-                  "I am a Creator",
-                  2000,
-                  "I am a Thinker",
-                  2000,
-                  "I am a Developer",
-                  2000,
-                  "I am a Innovator",
-                  2000,
-                  "I am a Inventor",
-                  2000,
-                ]}
-                loop={Infinity}
-                wrapper="h1"
-                className=""
-              />
-
               <div className="grid-container">
-                <div className="grid-item w3-margin">
+                <div className="grid-item ">
                   <StyledButton>
-                    <div className="w3-container w3-center">
+                    <div className=" ">
                       <h4>Blockchain Fundraising Platform</h4>
                       <p>
                         Designed a Decentralized Ethereum application and
@@ -48,9 +27,9 @@ const ModalPopupProjects = ({ showModalProjects, setShowModalProjects }) => {
                     </div>
                   </StyledButton>
                 </div>
-                <div className="grid-item w3-margin">
+                <div className="grid-item ">
                   <StyledButton>
-                    <div className="w3-container w3-center">
+                    <div className=" ">
                       <h4>LEEV: Electric Vehicle Power Stations Renting</h4>
                       <p>
                         A 4 month project to design the application architecture
@@ -61,9 +40,9 @@ const ModalPopupProjects = ({ showModalProjects, setShowModalProjects }) => {
                     </div>
                   </StyledButton>
                 </div>
-                <div className="grid-item  w3-margin">
+                <div className="grid-item  ">
                   <StyledButton>
-                    <div className="w3-container w3-center">
+                    <div className="">
                       <h4>Personal Website</h4>
                       <p>
                         Designed the website you are currently viewing using
@@ -73,9 +52,9 @@ const ModalPopupProjects = ({ showModalProjects, setShowModalProjects }) => {
                     </div>
                   </StyledButton>
                 </div>
-                <div className="grid-item  w3-margin">
+                <div className="grid-item  ">
                   <StyledButton>
-                    <div className="w3-container w3-center">
+                    <div className=" ">
                       <h4>Reversi/Othello</h4>
                       <p>
                         Utilized minimax algorithm with alpha beta pruning and
@@ -85,9 +64,9 @@ const ModalPopupProjects = ({ showModalProjects, setShowModalProjects }) => {
                     </div>
                   </StyledButton>
                 </div>
-                <div className="grid-item w3-margin">
+                <div className="grid-item ">
                   <StyledButton>
-                    <div className="w3-container w3-center">
+                    <div className="">
                       <h4>Maskaught</h4>
                       <p>
                         A mask detection designed to be placed outside shops. It
@@ -98,9 +77,9 @@ const ModalPopupProjects = ({ showModalProjects, setShowModalProjects }) => {
                     </div>
                   </StyledButton>
                 </div>
-                <div className="grid-item  w3-margin">
+                <div className="grid-item ">
                   <StyledButton>
-                    <div className="w3-container w3-center">
+                    <div className=" ">
                       <h4>Eye Can See</h4>
                       <p>
                         A 20/20 vision testing system that utilizes an speech
@@ -110,9 +89,9 @@ const ModalPopupProjects = ({ showModalProjects, setShowModalProjects }) => {
                     </div>
                   </StyledButton>
                 </div>
-                <div className="grid-item  w3-margin">
+                <div className="grid-item ">
                   <StyledButton>
-                    <div className="w3-container w3-center">
+                    <div className=" ">
                       <h4>ResumaBuilder</h4>
                       <p>
                         Resumabuilder allows you to compare your current resume
@@ -124,10 +103,6 @@ const ModalPopupProjects = ({ showModalProjects, setShowModalProjects }) => {
                 </div>
               </div>
             </ModalContent>
-            <CloseModalButton
-              aria-label="Close modal"
-              onClick={() => setShowModalProjects((prev) => !prev)}
-            />
           </ModalWrapper>
         </Background>
       ) : null}
@@ -148,18 +123,18 @@ const Background = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  width: 80%;
-  height: 80%;
+  width: 150vh;
+  height: 70vh;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #D7C58D;
+  background: #d7c58d;
   color: #000;
   position: absolute;
   z-index: 4;
   border-radius: 10px;
-  margin: 5% 10%;
+  margin: 5% 12.5%;
   overflow: auto;
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 0.5em;
   }
 
   ::-webkit-scrollbar-track {
@@ -180,13 +155,13 @@ const ModalContent = styled.div`
   align-items: center;
   line-height: 1.8;
   color: #141414;
-  h4{
-    font-size: 25px;
+  h4 {
+    font-size: 1.5em;
     color: #ff2281;
   }
   p {
     margin-bottom: 1rem;
-    font-size: 19px;
+    font-size: 1em;
   }
   button {
     padding: 10px 24px;
@@ -198,13 +173,15 @@ const ModalContent = styled.div`
 
 const CloseModalButton = styled(MdClose)`
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   width: 32px;
   height: 32px;
   padding: 0;
   z-index: 10;
+  border-radius: 100px;
+  background-color: #add8e6;
 `;
 
 const StyledButton = styled.button`

@@ -4,6 +4,7 @@ import "w3-css/w3.css";
 import ModalPopupProjects from "./ModalPopupProjects";
 import ModalPopupWork from "./ModalPopupWork";
 import styled from "styled-components";
+import { VscFoldDown } from "react-icons/vsc";
 
 const CardComp = () => {
   const [showModalProjects, setShowModalProjects] = useState(false);
@@ -16,15 +17,29 @@ const CardComp = () => {
   };
   return (
     <React.Fragment>
-      <div className="header w3-row">
-        <div className="w3-container w3-quarter">
+      <div className="w3-bar header1">
+        <div className="w3-bar-item w3-mobile" style={{ width: "33%" }}>
           <StyledButton onClick={openModalProjects}>Projects</StyledButton>
         </div>
-        <div className="w3-container w3-half">
-          <StyledName>Rishabh Saini</StyledName>
+        <div className="w3-bar-item w3-mobile" style={{ width: "33%" }}>
+          <StyledButton onClick={openModalProjects}>About me</StyledButton>
         </div>
-        <div className="w3-container w3-quarter">
+        <div className="w3-bar-item w3-mobile" style={{ width: "33%" }}>
           <StyledButton onClick={openModalWork}>Work Experience</StyledButton>
+        </div>
+      </div>
+      <div className="header ">
+        <div className="w3-container ">
+          <StyledName>
+            "Only those who attempt the absurd, can achieve the impossible"
+          </StyledName>
+        </div>
+      </div>
+      <div className="footer">
+        <div className="w3-container">
+          <button className="w3-button">
+            <VscFoldDown />
+          </button>
         </div>
       </div>
       <ModalPopupProjects
@@ -35,7 +50,7 @@ const CardComp = () => {
         showModalWork={showModalWork}
         setShowModalWork={setShowModalWork}
       ></ModalPopupWork>
-      <div className="cardComp">
+      {/* <div className="cardComp">
         <div className="w3-container w3-margin">
           <div className="box w3-panel w3-card ">
             <div className="cust-div">What inspires me?</div>
@@ -70,7 +85,7 @@ const CardComp = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };
@@ -103,6 +118,5 @@ const StyledName = styled.div`
   color: #fcedd8;
   font-family: "Niconne", cursive;
   font-weight: 700;
-  text-shadow: 5px 5px 0px #eb452b, 10px 10px 0px #efa032, 15px 15px 0px #46b59b,
-    20px 20px 0px #017e7f;
+  text-shadow: 5px 5px 0px #eb452b;
 `;

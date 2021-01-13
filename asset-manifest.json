@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/CubeBackground/static/css/main.5ce53b77.chunk.css",
-    "main.js": "/CubeBackground/static/js/main.fdbd36ad.chunk.js",
-    "main.js.map": "/CubeBackground/static/js/main.fdbd36ad.chunk.js.map",
-    "runtime-main.js": "/CubeBackground/static/js/runtime-main.aa588b63.js",
-    "runtime-main.js.map": "/CubeBackground/static/js/runtime-main.aa588b63.js.map",
-    "static/css/2.51b7c1e4.chunk.css": "/CubeBackground/static/css/2.51b7c1e4.chunk.css",
-    "static/js/2.4255d3a3.chunk.js": "/CubeBackground/static/js/2.4255d3a3.chunk.js",
-    "static/js/2.4255d3a3.chunk.js.map": "/CubeBackground/static/js/2.4255d3a3.chunk.js.map",
-    "static/js/3.dc1a9d45.chunk.js": "/CubeBackground/static/js/3.dc1a9d45.chunk.js",
-    "static/js/3.dc1a9d45.chunk.js.map": "/CubeBackground/static/js/3.dc1a9d45.chunk.js.map",
+    "main.css": "/CubeBackground/static/css/main.aa4890b6.chunk.css",
+    "main.js": "/CubeBackground/static/js/main.f921006e.chunk.js",
+    "main.js.map": "/CubeBackground/static/js/main.f921006e.chunk.js.map",
+    "runtime-main.js": "/CubeBackground/static/js/runtime-main.44ebcb5b.js",
+    "runtime-main.js.map": "/CubeBackground/static/js/runtime-main.44ebcb5b.js.map",
+    "static/css/2.ae9f1eb3.chunk.css": "/CubeBackground/static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.65943f4b.chunk.js": "/CubeBackground/static/js/2.65943f4b.chunk.js",
+    "static/js/2.65943f4b.chunk.js.map": "/CubeBackground/static/js/2.65943f4b.chunk.js.map",
+    "static/js/3.0aba0768.chunk.js": "/CubeBackground/static/js/3.0aba0768.chunk.js",
+    "static/js/3.0aba0768.chunk.js.map": "/CubeBackground/static/js/3.0aba0768.chunk.js.map",
     "index.html": "/CubeBackground/index.html",
-    "static/css/2.51b7c1e4.chunk.css.map": "/CubeBackground/static/css/2.51b7c1e4.chunk.css.map",
-    "static/css/main.5ce53b77.chunk.css.map": "/CubeBackground/static/css/main.5ce53b77.chunk.css.map",
-    "static/js/2.4255d3a3.chunk.js.LICENSE.txt": "/CubeBackground/static/js/2.4255d3a3.chunk.js.LICENSE.txt"
+    "static/css/2.ae9f1eb3.chunk.css.map": "/CubeBackground/static/css/2.ae9f1eb3.chunk.css.map",
+    "static/css/main.aa4890b6.chunk.css.map": "/CubeBackground/static/css/main.aa4890b6.chunk.css.map",
+    "static/js/2.65943f4b.chunk.js.LICENSE.txt": "/CubeBackground/static/js/2.65943f4b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.aa588b63.js",
-    "static/css/2.51b7c1e4.chunk.css",
-    "static/js/2.4255d3a3.chunk.js",
-    "static/css/main.5ce53b77.chunk.css",
-    "static/js/main.fdbd36ad.chunk.js"
+    "static/js/runtime-main.44ebcb5b.js",
+    "static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.65943f4b.chunk.js",
+    "static/css/main.aa4890b6.chunk.css",
+    "static/js/main.f921006e.chunk.js"
   ]
 }

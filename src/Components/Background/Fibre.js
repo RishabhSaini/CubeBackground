@@ -1,10 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "react-three-fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import "./Fibre.css";
 import "./ColorMaterial";
 import clamp from "clamp";
+
+import styled from "styled-components";
+
 import {
   ChromaticAberration,
   EffectComposer,
@@ -98,35 +101,54 @@ const Fibre = () => {
   }
 
   return (
-    <Canvas
-      onCreated={({ gl }) => {
-        gl.setClearColor(pallete[4]);
-      }}
-      camera={{ position: [0, 10, 0] }}
-    >
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Box position={[0, 0, 0]} count={20} />
-      <EffectComposer>
-        <ChromaticAberration offset={[-0.001, 0.005]} />
-        <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
-        <Noise opacity={0.02} />
-        <Vignette eskil={false} offset={0.1} darkness={1.1} />
-        {/* <DotScreen
+    <React.Fragment>
+      <StyledName>
+        "Only those who attempt the absurd, can achieve the impossible"
+      </StyledName>
+      <Canvas
+        onCreated={({ gl }) => {
+          gl.setClearColor(pallete[4]);
+        }}
+        camera={{ position: [0, 10, 0] }}
+      >
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box position={[0, 0, 0]} count={20} />
+        <EffectComposer>
+          <ChromaticAberration offset={[-0.001, 0.005]} />
+          <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
+          <Noise opacity={0.02} />
+          <Vignette eskil={false} offset={0.1} darkness={1.1} />
+          {/* <DotScreen
           blendFunction={BlendFunction.NORMAL} // blend mode
           angle={Math.PI * 0.5} // angle of the dot pattern
           scale={0.9} // scale of the dot pattern
         /> */}
-        <HueSaturation
-          blendFunction={BlendFunction.NORMAL} // blend mode
-          hue={0} // hue in radians
-          saturation={0.2} // saturation in radians
-        />
-      </EffectComposer>
-      <CameraMovement />
-      <OrbitControls />
-    </Canvas>
+          <HueSaturation
+            blendFunction={BlendFunction.NORMAL} // blend mode
+            hue={0} // hue in radians
+            saturation={0.2} // saturation in radians
+          />
+        </EffectComposer>
+        <CameraMovement />
+        <OrbitControls />
+      </Canvas>
+    </React.Fragment>
   );
 };
 
 export default Fibre;
+
+const StyledName = styled.div`
+  font-size: 4em;
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #fcedd8;
+  font-family: "Niconne", cursive;
+  font-weight: 700;
+  text-shadow: 5px 5px 0px #eb452b;
+  position: absolute;
+  z-index: 2;
+`;

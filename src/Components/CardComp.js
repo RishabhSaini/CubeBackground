@@ -3,17 +3,22 @@ import "./CardComp.css";
 import "w3-css/w3.css";
 import ModalPopupProjects from "./ModalPopupProjects";
 import ModalPopupWork from "./ModalPopupWork";
+import ModalPopupAboutMe from "./ModalPopupAboutMe";
 import styled from "styled-components";
 import { VscFoldDown } from "react-icons/vsc";
 
 const CardComp = () => {
   const [showModalProjects, setShowModalProjects] = useState(false);
   const [showModalWork, setShowModalWork] = useState(false);
+  const [showModalAboutMe, setShowModalAboutMe] = useState(false);
   const openModalProjects = () => {
     setShowModalProjects((prev) => !prev);
   };
   const openModalWork = () => {
     setShowModalWork((prev) => !prev);
+  };
+  const openModalAboutMe = () => {
+    setShowModalAboutMe((prev) => !prev);
   };
   return (
     <React.Fragment>
@@ -22,7 +27,7 @@ const CardComp = () => {
           <StyledButton onClick={openModalProjects}>Projects</StyledButton>
         </div>
         <div className="w3-bar-item w3-mobile" style={{ width: "33%" }}>
-          <StyledButton onClick={openModalProjects}>About me</StyledButton>
+          <StyledButton onClick={openModalAboutMe}>About me</StyledButton>
         </div>
         <div className="w3-bar-item w3-mobile" style={{ width: "33%" }}>
           <StyledButton onClick={openModalWork}>Work Experience</StyledButton>
@@ -50,42 +55,10 @@ const CardComp = () => {
         showModalWork={showModalWork}
         setShowModalWork={setShowModalWork}
       ></ModalPopupWork>
-      {/* <div className="cardComp">
-        <div className="w3-container w3-margin">
-          <div className="box w3-panel w3-card ">
-            <div className="cust-div">What inspires me?</div>
-            <ul className="cust-ul">
-              <li>
-                "Only those who attempt the absurd can achieve the impossible"
-                Albert Einstein
-              </li>
-            </ul>
-            <div className="cust-div">What is my aim?</div>
-            <ul className="cust-ul">
-              <li>
-                Leverage the power of technology to create paradigm shifts in
-                the way the society thinks
-              </li>
-              <li>
-                Creating solutions that make a meaningful impact on society
-              </li>
-            </ul>
-            <div className="cust-div">Who am I?</div>
-            <ul className="cust-ul">
-              <li>"I think, therefore I am" René Descartes</li>
-              <li>Education: Youtube, Google, Coursera</li>
-              <li>
-                2nd Year Computer Engineering Undergraduate at University of
-                Toronto
-              </li>
-            </ul>
-            <div className="cust-div">Why a website?</div>
-            <ul className="cust-ul">
-              <li>To showcase my portfolio and ongoing projects</li>
-            </ul>
-          </div>
-        </div>
-      </div> */}
+      <ModalPopupAboutMe
+        showModalAboutMe={showModalAboutMe}
+        setModalShowAboutMe={setShowModalAboutMe}
+      ></ModalPopupAboutMe>
     </React.Fragment>
   );
 };
@@ -120,3 +93,42 @@ const StyledName = styled.div`
   font-weight: 700;
   text-shadow: 5px 5px 0px #eb452b;
 `;
+
+{
+  /* <div className="cardComp">
+        <div className="w3-container w3-margin">
+          <div className="box w3-panel w3-card ">
+            <div className="cust-div">What inspires me?</div>
+            <ul className="cust-ul">
+              <li>
+                "Only those who attempt the absurd can achieve the impossible"
+                Albert Einstein
+              </li>
+            </ul>
+            <div className="cust-div">What is my aim?</div>
+            <ul className="cust-ul">
+              <li>
+                Leverage the power of technology to create paradigm shifts in
+                the way the society thinks
+              </li>
+              <li>
+                Creating solutions that make a meaningful impact on society
+              </li>
+            </ul>
+            <div className="cust-div">Who am I?</div>
+            <ul className="cust-ul">
+              <li>"I think, therefore I am" René Descartes</li>
+              <li>Education: Youtube, Google, Coursera</li>
+              <li>
+                2nd Year Computer Engineering Undergraduate at University of
+                Toronto
+              </li>
+            </ul>
+            <div className="cust-div">Why a website?</div>
+            <ul className="cust-ul">
+              <li>To showcase my portfolio and ongoing projects</li>
+            </ul>
+          </div>
+        </div>
+      </div> */
+}
